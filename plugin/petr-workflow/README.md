@@ -19,8 +19,6 @@ claude plugin marketplace add petrsovadina/petr-workflow
 claude plugin install petr-workflow@petr-workflow
 ```
 
-Repo je soukromé, potřebuješ k němu přístup na GitHubu.
-
 Prefix `pw-` brání kolizi s vestavěnými příkazy Claude Code `/plan` a `/review`.
 
 Instalace, první úloha a řešení problémů: [ONBOARDING.md](https://github.com/petrsovadina/petr-workflow/blob/main/ONBOARDING.md).

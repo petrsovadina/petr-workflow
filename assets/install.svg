@@ -71,7 +71,7 @@
       <text x="479" y="350"><tspan fill="#3ddc97">✓</tspan> 7 skills jako plugin</text>
       <text x="479" y="376"><tspan fill="#3ddc97">✓</tspan> aktualizace přes claude plugin update</text>
       <text x="479" y="402"><tspan fill="#8d8299">–</tspan> bez globálních pravidel</text>
-      <text x="479" y="428"><tspan fill="#8d8299">–</tspan> potřebuje přístup k repu</text>
+      <text x="479" y="428"><tspan fill="#8d8299">–</tspan> potřebuje git</text>
     </g>
   </g>
 

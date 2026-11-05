@@ -2,6 +2,7 @@
 
 ## Neuvolněno
 
+- Repo je veřejné: stažení a aktualizace přes `curl` bez přihlášení, texty o soukromém repu odstraněné.
 - README: cover a dvě infografiky v `assets/` (flow metody, tři cesty instalace).
 - README, Aktualizace: verze je v proměnné `V`, tag se skládá jako `v$V`. Dřív placeholder `<nová-verze>` vedl na `gh release download 0.1.1`, které tag `v0.1.1` nenajde.
 

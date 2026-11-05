@@ -43,20 +43,23 @@ Verze 0.1.1 · licence Apache-2.0 · [CHANGELOG](CHANGELOG.md) · [ONBOARDING](O
 | Claude Code | instalace pro Claude Code | `claude --version` |
 | Node.js + `npx` | `./install.sh --all` (skill balíky, REA) | `node --version` |
 | Node.js 22.23.4+, 24.22.1+ nebo 26.12.1+ | REA | `node --version` |
-| `git` s přístupem k repu | instalace přes marketplace (repo je soukromé) | `gh auth status` |
+| `git` | instalace přes marketplace | `git --version` |
 
 ## Stažení
 
-Repo `petrsovadina/petr-workflow` je soukromé. Release stáhneš, když k němu máš přístup:
+Repo `petrsovadina/petr-workflow` je veřejné, release stáhneš bez přihlášení:
 
 ```bash
-gh release download v0.1.1 -R petrsovadina/petr-workflow
+B=https://github.com/petrsovadina/petr-workflow/releases/download/v0.1.1
+curl -fLO "$B/petr-workflow-0.1.1.zip"
+curl -fLO "$B/petr-workflow.plugin"
+curl -fLO "$B/SHA256SUMS.txt"
 shasum -a 256 -c SHA256SUMS.txt
 ```
 
-První příkaz stáhne tři soubory: `petr-workflow-0.1.1.zip` (celý kit), `petr-workflow.plugin` (plugin pro Claude aplikaci) a `SHA256SUMS.txt`. Druhý ověří, že se soubory při stažení nepoškodily; u obou má vypsat `OK`.
+Stáhneš tři soubory: `petr-workflow-0.1.1.zip` (celý kit), `petr-workflow.plugin` (plugin pro Claude aplikaci) a `SHA256SUMS.txt`. Poslední příkaz ověří, že se soubory při stažení nepoškodily; u obou má vypsat `OK`.
 
-Bez přístupu k repu napiš Petrovi o pozvánku, nebo použij odkaz na stažení, který ti poslal.
+S GitHub CLI stačí `gh release download v0.1.1 -R petrsovadina/petr-workflow`. Bez terminálu stáhni soubory z [posledního releasu](https://github.com/petrsovadina/petr-workflow/releases/latest).
 
 ## Instalace
 
@@ -103,7 +106,7 @@ claude plugin marketplace add petrsovadina/petr-workflow
 claude plugin install petr-workflow@petr-workflow
 ```
 
-První příkaz přidá repo jako marketplace, druhý z něj nainstaluje plugin. Dostaneš jen 7 skills, bez globálních pravidel a extra balíků. Potřebuješ přístup k repu.
+První příkaz přidá repo jako marketplace, druhý z něj nainstaluje plugin. Dostaneš jen 7 skills, bez globálních pravidel a extra balíků.
 
 ### C. Claude aplikace (desktop chat)
 
@@ -193,7 +196,7 @@ Kit (cesta A): stáhni nový release, rozbal ho přes starou složku a spusť in
 
 ```bash
 V=0.1.1   # číslo nové verze bez „v“, viz https://github.com/petrsovadina/petr-workflow/releases
-gh release download "v$V" -R petrsovadina/petr-workflow
+curl -fLO "https://github.com/petrsovadina/petr-workflow/releases/download/v$V/petr-workflow-$V.zip"
 unzip -o "petr-workflow-$V.zip" -d ~
 ~/petr-workflow/install.sh
 ```
@@ -263,7 +266,7 @@ Výstup bývá stovky MB. Když REA ohlásí `artifact_integrity_mismatch`, při
 | `/pw-spec` se nenabízí | Ověř instalaci (viz [Ověření instalace](#ověření-instalace)) a restartuj Claude Code. |
 | Skills se načítají dvakrát | Máš kit i plugin z marketplace. Jeden z nich odinstaluj. |
 | `install.sh` vypíše řádek s `!!` | Jedna položka selhala, ostatní prošly. Spusť příkaz z toho řádku ručně a uvidíš chybu. `./install.sh --all` jde pustit znovu. |
-| `claude plugin marketplace add` selže | Nemáš přístup k soukromému repu, nebo `git` není přihlášený. Ověř `gh auth status`. |
+| `claude plugin marketplace add` selže | Chybí `git`, nebo není dostupný GitHub. Ověř `git ls-remote https://github.com/petrsovadina/petr-workflow`. |
 | `shasum -c` nevypíše `OK` | Soubor se nestáhl celý. Stáhni ho znovu. |
 | REA: `artifact_integrity_mismatch` | Zopakuj s `--integrity-policy record-and-continue`. Dotčené bajty se pak berou jako nedůvěryhodné. |
 | REA: `resource_constraint` | Výsledek je na REA moc velký (například ChatGPT, Spark). Analyzuj menší část appky. |

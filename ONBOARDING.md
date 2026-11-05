@@ -6,7 +6,7 @@ Postup má dvě varianty: **Claude Code** (terminál, práce v repu) a **Claude 
 
 ## 1. Co budeš potřebovat
 
-- Stažený `petr-workflow-0.1.1.zip` z [releasu](https://github.com/petrsovadina/petr-workflow/releases), nebo přístup k repu `petrsovadina/petr-workflow`.
+- Stažený `petr-workflow-0.1.1.zip` z [releasu](https://github.com/petrsovadina/petr-workflow/releases/latest). Repo je veřejné, stažení nepotřebuje přihlášení.
 - Pro Claude Code: nainstalovaný Claude Code. Ověříš ho příkazem `claude --version`.
 - Pro `./install.sh --all`: Node.js a `npx`. Skripty přes ně instalují skill balíky a REA.
 - Pro REA: Node.js 22.x od verze 22.23.4, 24.x od verze 24.22.1, nebo 26.12.1 a novější.
@@ -85,7 +85,7 @@ claude plugin marketplace add petrsovadina/petr-workflow
 claude plugin install petr-workflow@petr-workflow
 ```
 
-Repo je soukromé, takže potřebuješ k němu přístup na GitHubu a přihlášený `git` (třeba přes `gh auth login`). Aktualizace pak stáhneš přes `claude plugin update petr-workflow@petr-workflow`.
+Repo je veřejné, stačí nainstalovaný `git`. Aktualizace pak stáhneš přes `claude plugin update petr-workflow@petr-workflow`.
 
 Nekombinuj to s `./install.sh`: oba způsoby instalují stejné skills, takže by se načítaly dvakrát.
 
