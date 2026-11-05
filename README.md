@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/cover.svg" alt="petr-workflow: spec, plán, implementace a review pro Claude Code a Claude aplikaci" width="100%">
+</p>
+
 # petr-workflow
 
 Plugin a kit pro Claude, se kterým pracuje stejně jako u Petra: nejdřív kontext a spec, potom plán po malých fázích, implementace s minimálním diffem, nezávislé review a zápis rozhodnutí. Funguje v **Claude Code** i v **Claude aplikaci** (desktop chat).
@@ -28,6 +32,10 @@ Verze 0.1.1 · licence Apache-2.0 · [CHANGELOG](CHANGELOG.md) · [ONBOARDING](O
 | `setup/*.sh` | Skripty, které `install.sh --all` volá; jdou spustit i samostatně |
 | `rea/` | Jak rozebrat hotovou appku přes REA a patterny, které z toho vyšly |
 
+<p align="center">
+  <img src="assets/flow.svg" alt="Flow: /pw-spec vytvoří INITIAL.md, /pw-plan PLAN.md, /pw-implement jednu fázi s minimálním diffem, /pw-review nezávislé review; /pw-adr zapisuje rozhodnutí, /pw-handoff předává práci" width="100%">
+</p>
+
 ## Požadavky
 
 | Co | Kdy | Ověříš |
@@ -51,6 +59,10 @@ První příkaz stáhne tři soubory: `petr-workflow-0.1.1.zip` (celý kit), `pe
 Bez přístupu k repu napiš Petrovi o pozvánku, nebo použij odkaz na stažení, který ti poslal.
 
 ## Instalace
+
+<p align="center">
+  <img src="assets/install.svg" alt="Tři cesty instalace: A celý kit přes install.sh, B plugin přes marketplace, C Claude aplikace přes petr-workflow.plugin" width="100%">
+</p>
 
 Vyber **jednu** cestu. Kit i marketplace instalují stejné skills, takže kombinace obou by je načetla dvakrát.
 
@@ -268,4 +280,5 @@ Výstup bývá stovky MB. Když REA ohlásí `artifact_integrity_mismatch`, při
 | `ONBOARDING.md` | První instalace a první úloha krok za krokem |
 | `rea/PLAYBOOK.md`, `rea/AGENT-APP-PATTERNS.md` | REA postup a patterny z agentních appek |
 | `.github/workflows/ci.yml` | Kontrola pluginu, marketplace a instalace při každém pushi |
+| `assets/` | Cover a infografiky v README (SVG) |
 | `CHANGELOG.md`, `LICENSE`, `NOTICE` | Verze a licence Apache-2.0 |

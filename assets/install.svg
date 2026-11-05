@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="600" viewBox="0 0 1280 600" role="img" aria-labelledby="t d">
+  <title id="t">Tři cesty instalace</title>
+  <desc id="d">A: celý kit přes install.sh do ~/.claude, se 7 skills a globálními pravidly, s --all i pluginy a MCP. B: jen plugin přes claude plugin marketplace. C: Claude aplikace přes soubor petr-workflow.plugin. Vyber jednu cestu, pak spusť /pw-spec.</desc>
+  <defs>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#241d2b"/>
+      <stop offset="1" stop-color="#1b1620"/>
+    </linearGradient>
+    <linearGradient id="hl" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e05bb0"/>
+      <stop offset="1" stop-color="#7a2f88"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="20%" cy="0%" r="60%">
+      <stop offset="0" stop-color="#D84BA4" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#16121a" stop-opacity="0"/>
+    </radialGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#e05bb0"/>
+    </marker>
+    <style>
+      .sans{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+      .mono{font-family:'SF Mono',ui-monospace,Menlo,Consolas,'Liberation Mono',monospace}
+    </style>
+  </defs>
+
+  <rect width="1280" height="600" rx="24" fill="#16121a"/>
+  <rect width="1280" height="600" rx="24" fill="url(#glow)"/>
+
+  <g class="sans">
+    <text x="64" y="74" class="mono" font-size="14" letter-spacing="3" fill="#e05bb0">INSTALACE</text>
+    <text x="64" y="112" font-size="32" font-weight="800" letter-spacing="-.5" fill="#ffffff">Vyber jednu ze tří cest</text>
+    <text x="1216" y="112" text-anchor="end" font-size="15" fill="#8d8299">Kombinace by načetla skills dvakrát.</text>
+  </g>
+
+  <!-- A -->
+  <g class="sans">
+    <rect x="64" y="146" width="370" height="330" rx="16" fill="url(#card)"/>
+    <rect x="65" y="147" width="368" height="328" rx="15" fill="none" stroke="url(#hl)" stroke-width="2"/>
+    <rect x="88" y="170" width="34" height="34" rx="9" fill="#D84BA4"/>
+    <text x="105" y="194" text-anchor="middle" font-size="18" font-weight="800" fill="#fff">A</text>
+    <text x="136" y="186" font-size="18" font-weight="700" fill="#ffffff">Claude Code · celý kit</text>
+    <text x="136" y="206" font-size="13" font-weight="600" fill="#e05bb0">DOPORUČENO</text>
+    <rect x="88" y="226" width="322" height="92" rx="10" fill="#0f0c12"/>
+    <g class="mono" font-size="13.5">
+      <text x="104" y="254"><tspan fill="#e05bb0">$</tspan><tspan fill="#ece6f0"> unzip petr-workflow-*.zip -d ~</tspan></text>
+      <text x="104" y="278"><tspan fill="#e05bb0">$</tspan><tspan fill="#ece6f0"> cd ~/petr-workflow</tspan></text>
+      <text x="104" y="302"><tspan fill="#e05bb0">$</tspan><tspan fill="#ece6f0"> ./install.sh</tspan><tspan fill="#8d8299"> [--all]</tspan></text>
+    </g>
+    <g font-size="15" fill="#c9bfd2">
+      <text x="88" y="350"><tspan fill="#3ddc97">✓</tspan> 7 skills do ~/.claude/skills</text>
+      <text x="88" y="376"><tspan fill="#3ddc97">✓</tspan> globální pravidla CLAUDE.petr.md</text>
+      <text x="88" y="402"><tspan fill="#3ddc97">✓</tspan> zálohy místo přepisu</text>
+      <text x="88" y="428"><tspan fill="#e05bb0">+</tspan> s --all pluginy, skill balíky, MCP</text>
+    </g>
+  </g>
+
+  <!-- B -->
+  <g class="sans">
+    <rect x="455" y="146" width="370" height="330" rx="16" fill="url(#card)" stroke="#33293b"/>
+    <rect x="479" y="170" width="34" height="34" rx="9" fill="#2e2236" stroke="#4a3f55"/>
+    <text x="496" y="194" text-anchor="middle" font-size="18" font-weight="800" fill="#fff">B</text>
+    <text x="527" y="186" font-size="18" font-weight="700" fill="#ffffff">Claude Code · plugin</text>
+    <text x="527" y="206" font-size="13" font-weight="600" fill="#8d8299">PŘES MARKETPLACE</text>
+    <rect x="479" y="226" width="322" height="92" rx="10" fill="#0f0c12"/>
+    <g class="mono" font-size="13.5">
+      <text x="495" y="254"><tspan fill="#e05bb0">$</tspan><tspan fill="#ece6f0"> claude plugin marketplace</tspan></text>
+      <text x="519" y="278" fill="#ece6f0">add petrsovadina/petr-workflow</text>
+      <text x="495" y="302"><tspan fill="#e05bb0">$</tspan><tspan fill="#ece6f0"> claude plugin install …</tspan></text>
+    </g>
+    <g font-size="15" fill="#c9bfd2">
+      <text x="479" y="350"><tspan fill="#3ddc97">✓</tspan> 7 skills jako plugin</text>
+      <text x="479" y="376"><tspan fill="#3ddc97">✓</tspan> aktualizace přes claude plugin update</text>
+      <text x="479" y="402"><tspan fill="#8d8299">–</tspan> bez globálních pravidel</text>
+      <text x="479" y="428"><tspan fill="#8d8299">–</tspan> potřebuje přístup k repu</text>
+    </g>
+  </g>
+
+  <!-- C -->
+  <g class="sans">
+    <rect x="846" y="146" width="370" height="330" rx="16" fill="url(#card)" stroke="#33293b"/>
+    <rect x="870" y="170" width="34" height="34" rx="9" fill="#2e2236" stroke="#4a3f55"/>
+    <text x="887" y="194" text-anchor="middle" font-size="18" font-weight="800" fill="#fff">C</text>
+    <text x="918" y="186" font-size="18" font-weight="700" fill="#ffffff">Claude aplikace</text>
+    <text x="918" y="206" font-size="13" font-weight="600" fill="#8d8299">DESKTOP CHAT</text>
+    <rect x="870" y="226" width="322" height="92" rx="10" fill="#0f0c12"/>
+    <g font-size="14.5" fill="#ece6f0">
+      <text x="886" y="254"><tspan fill="#e05bb0" class="mono">1</tspan>  nahraj <tspan class="mono" fill="#f3c6e3">petr-workflow.plugin</tspan></text>
+      <text x="886" y="278"><tspan fill="#e05bb0" class="mono">2</tspan>  potvrď instalaci v náhledu</text>
+      <text x="886" y="302"><tspan fill="#e05bb0" class="mono">3</tspan>  pravidla vlož do preferencí</text>
+    </g>
+    <g font-size="15" fill="#c9bfd2">
+      <text x="870" y="350"><tspan fill="#3ddc97">✓</tspan> 7 skills v chatu</text>
+      <text x="870" y="376"><tspan fill="#3ddc97">✓</tspan> výstupy jako soubory v konverzaci</text>
+      <text x="870" y="402"><tspan fill="#3ddc97">✓</tspan> s připojenou složkou přímo v ní</text>
+      <text x="870" y="428"><tspan fill="#8d8299">–</tspan> nahrání zatím neověřené</text>
+    </g>
+  </g>
+
+  <!-- converge -->
+  <g stroke="#e05bb0" stroke-width="2" fill="none" opacity=".85">
+    <path d="M249 476V500Q249 516 265 516H560Q576 516 576 532V538" />
+    <path d="M640 476V538" marker-end="url(#arr)"/>
+    <path d="M1031 476V500Q1031 516 1015 516H720Q704 516 704 532V538"/>
+  </g>
+  <rect x="470" y="540" width="340" height="44" rx="22" fill="#D84BA4"/>
+  <text x="640" y="568" text-anchor="middle" class="mono" font-size="16" font-weight="700" fill="#ffffff">/pw-spec &lt;co chceš postavit&gt;</text>
+</svg>
