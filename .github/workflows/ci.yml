@@ -1,0 +1,35 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install Claude Code CLI
+        run: npm install -g @anthropic-ai/claude-code
+      - name: Shell syntax
+        run: for f in install.sh setup/*.sh; do bash -n "$f"; done
+      - name: Validate plugin and marketplace
+        run: |
+          claude plugin validate plugin/petr-workflow/.claude-plugin/plugin.json
+          claude plugin validate .claude-plugin/marketplace.json
+      - name: install.sh in clean HOME
+        run: |
+          T="$(mktemp -d)"
+          HOME="$T" ./install.sh
+          HOME="$T" ./install.sh | grep -q "beze změny"
+          for s in petr-workflow pw-spec pw-plan pw-implement pw-review pw-adr pw-handoff; do
+            test -f "$T/.claude/skills/$s/SKILL.md"
+          done
+          grep -q "@~/.claude/CLAUDE.petr.md" "$T/.claude/CLAUDE.md"
+      - name: No secrets
+        run: |
+          ! grep -rInE "(sk-ant|ghp_|gho_|xox[bp]-|Bearer [A-Za-z0-9]{12,})" --exclude-dir=.git --exclude-dir=.github .
