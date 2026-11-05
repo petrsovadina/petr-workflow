@@ -1,5 +1,9 @@
 # Changelog
 
+## Nevydáno
+
+- README přepsané jako příručka: stažení a ověření releasu, tři cesty instalace, ověření, všechny příkazy `/pw-*`, aktualizace, odinstalace do koše, REA a řešení problémů. Každý blok příkazů otestovaný v čisté domovské složce.
+
 ## 0.1.0 – 2026-11-05
 
 První release.
