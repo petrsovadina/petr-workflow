@@ -2,7 +2,7 @@
 
 Plugin a kit pro Claude, se kterým pracuje stejně jako u Petra: nejdřív kontext a spec, potom plán po malých fázích, implementace s minimálním diffem, nezávislé review a zápis rozhodnutí. Funguje v **Claude Code** i v **Claude aplikaci** (desktop chat).
 
-Verze 0.1.0 · licence Apache-2.0 · [CHANGELOG](CHANGELOG.md) · [ONBOARDING](ONBOARDING.md) pro první instalaci krok za krokem. Neobsahuje tokeny, klienty ani osobní data.
+Verze 0.1.1 · licence Apache-2.0 · [CHANGELOG](CHANGELOG.md) · [ONBOARDING](ONBOARDING.md) pro první instalaci krok za krokem. Neobsahuje tokeny, klienty ani osobní data.
 
 ## Obsah
 
@@ -42,11 +42,11 @@ Verze 0.1.0 · licence Apache-2.0 · [CHANGELOG](CHANGELOG.md) · [ONBOARDING](O
 Repo `petrsovadina/petr-workflow` je soukromé. Release stáhneš, když k němu máš přístup:
 
 ```bash
-gh release download v0.1.0 -R petrsovadina/petr-workflow
+gh release download v0.1.1 -R petrsovadina/petr-workflow
 shasum -a 256 -c SHA256SUMS.txt
 ```
 
-První příkaz stáhne tři soubory: `petr-workflow-0.1.0.zip` (celý kit), `petr-workflow.plugin` (plugin pro Claude aplikaci) a `SHA256SUMS.txt`. Druhý ověří, že se soubory při stažení nepoškodily; u obou má vypsat `OK`.
+První příkaz stáhne tři soubory: `petr-workflow-0.1.1.zip` (celý kit), `petr-workflow.plugin` (plugin pro Claude aplikaci) a `SHA256SUMS.txt`. Druhý ověří, že se soubory při stažení nepoškodily; u obou má vypsat `OK`.
 
 Bez přístupu k repu napiš Petrovi o pozvánku, nebo použij odkaz na stažení, který ti poslal.
 
@@ -57,7 +57,7 @@ Vyber **jednu** cestu. Kit i marketplace instalují stejné skills, takže kombi
 ### A. Claude Code: celý kit (doporučeno)
 
 ```bash
-unzip petr-workflow-0.1.0.zip -d ~
+unzip petr-workflow-0.1.1.zip -d ~
 cd ~/petr-workflow
 ./install.sh
 ```

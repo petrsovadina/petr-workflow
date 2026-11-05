@@ -7,7 +7,7 @@ Používej ho jen na software, který vlastníš nebo smíš zkoumat (výzkum, i
 ## Instalace
 
 ```bash
-npx rea-agents@latest setup     # ukáže plán, po schválení zaregistruje MCP + skill
+npx -y rea-agents@6.5.0 setup   # ukáže plán, po schválení zaregistruje MCP + skill
 # restartuj Claude Code, ověř: /mcp → rea
 ```
 Static analýza JS/Electron a .NET nepotřebuje žádný engine. Na nativní binárky potřebuješ Ghidru, Hopper, IDA nebo Kuna.

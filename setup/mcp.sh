@@ -8,7 +8,7 @@ echo "== CORE"
 
 # REA — reverse engineering appek, webů a binárek (https://rea.tools)
 # Doporučený oficiální setup, ukáže plán a zeptá se na schválení:
-#   npx rea-agents@latest setup
+#   npx -y rea-agents@6.5.0 setup
 # Nebo ruční registrace pinnuté verze:
 claude mcp add --scope user rea -- npx -y rea-agents@6.5.0 mcp || true
 

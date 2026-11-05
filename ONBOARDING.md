@@ -6,7 +6,7 @@ Postup má dvě varianty: **Claude Code** (terminál, práce v repu) a **Claude 
 
 ## 1. Co budeš potřebovat
 
-- Rozbalený `petr-workflow-0.1.0.zip` z [releasu](https://github.com/petrsovadina/petr-workflow/releases), nebo přístup k repu `petrsovadina/petr-workflow`.
+- Stažený `petr-workflow-0.1.1.zip` z [releasu](https://github.com/petrsovadina/petr-workflow/releases), nebo přístup k repu `petrsovadina/petr-workflow`.
 - Pro Claude Code: nainstalovaný Claude Code. Ověříš ho příkazem `claude --version`.
 - Pro `./install.sh --all`: Node.js a `npx`. Skripty přes ně instalují skill balíky a REA.
 - Pro REA: Node.js 22.x od verze 22.23.4, 24.x od verze 24.22.1, nebo 26.12.1 a novější.
@@ -29,7 +29,7 @@ Postup má dvě varianty: **Claude Code** (terminál, práce v repu) a **Claude 
 Rozbal zip a vlož do Claude Code tenhle prompt. Claude spustí kroky z 3.1 a ověří výsledek:
 
 ```text
-Rozbal petr-workflow-0.1.0.zip do domovské složky (vznikne ~/petr-workflow), přečti ONBOARDING.md a spusť ./install.sh. Ukaž mi výstup, ověř, že ~/.claude/skills obsahuje 7 skills (petr-workflow a pw-*), a navrhni první úlohu pro /pw-spec v mém aktuálním repu.
+Rozbal petr-workflow-0.1.1.zip do domovské složky (vznikne ~/petr-workflow), přečti ONBOARDING.md a spusť ./install.sh. Ukaž mi výstup, ověř, že ~/.claude/skills obsahuje 7 skills (petr-workflow a pw-*), a navrhni první úlohu pro /pw-spec v mém aktuálním repu.
 ```
 
 Claude se před spuštěním skriptu zeptá na povolení, pokud to tvoje nastavení vyžaduje.
@@ -37,7 +37,8 @@ Claude se před spuštěním skriptu zeptá na povolení, pokud to tvoje nastave
 ### 3.1 Základ
 
 ```bash
-cd petr-workflow
+unzip petr-workflow-0.1.1.zip -d ~
+cd ~/petr-workflow
 ./install.sh
 ```
 
@@ -54,6 +55,7 @@ Když skill se stejným názvem už existuje a liší se, skript ho nejdřív p�
 ### 3.2 Pluginy, skill balíky a MCP (volitelné)
 
 ```bash
+cd ~/petr-workflow
 ./install.sh --all
 ```
 
@@ -66,6 +68,7 @@ Kromě základu spustí:
 Volitelné balíky (n8n, marketing, video, caveman a další) přidáš takhle:
 
 ```bash
+cd ~/petr-workflow
 WITH_OPTIONAL=1 ./install.sh --all
 ```
 

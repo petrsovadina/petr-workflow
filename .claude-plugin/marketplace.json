@@ -7,7 +7,7 @@
       "name": "petr-workflow",
       "source": "./plugin/petr-workflow",
       "description": "Pracovní metoda implementation-first: spec → plán → implementace → review, ADR a handoff. Funguje v Claude Code i v Claude aplikaci.",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "category": "productivity",
       "tags": ["workflow", "spec", "adr", "review", "czech"],
       "author": { "name": "Petr Sovadina", "url": "https://github.com/petrsovadina" },

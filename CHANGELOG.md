@@ -1,8 +1,10 @@
 # Changelog
 
-## Nevydáno
+## 0.1.1 – 2026-11-05
 
 - README přepsané jako příručka: stažení a ověření releasu, tři cesty instalace, ověření, všechny příkazy `/pw-*`, aktualizace, odinstalace do koše, REA a řešení problémů. Každý blok příkazů otestovaný v čisté domovské složce.
+- ONBOARDING: instalace rozbaluje do `~` a bloky s `--all` začínají `cd ~/petr-workflow`, stejně jako README.
+- REA všude pinnutý na `rea-agents@6.5.0` (PLAYBOOK, `setup/mcp.sh`).
 
 ## 0.1.0 – 2026-11-05
 
