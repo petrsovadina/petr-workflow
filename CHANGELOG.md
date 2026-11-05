@@ -1,5 +1,9 @@
 # Changelog
 
+## Neuvolněno
+
+- README, Aktualizace: verze je v proměnné `V`, tag se skládá jako `v$V`. Dřív placeholder `<nová-verze>` vedl na `gh release download 0.1.1`, které tag `v0.1.1` nenajde.
+
 ## 0.1.1 – 2026-11-05
 
 - README přepsané jako příručka: stažení a ověření releasu, tři cesty instalace, ověření, všechny příkazy `/pw-*`, aktualizace, odinstalace do koše, REA a řešení problémů. Každý blok příkazů otestovaný v čisté domovské složce.

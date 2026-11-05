@@ -180,8 +180,9 @@ Prefix `pw-` je schválně: Claude Code má vestavěné `/plan` a `/review`.
 Kit (cesta A): stáhni nový release, rozbal ho přes starou složku a spusť instalátor znovu. Změněné skills se před přepsáním zálohují.
 
 ```bash
-gh release download <nová-verze> -R petrsovadina/petr-workflow
-unzip -o petr-workflow-<nová-verze>.zip -d ~
+V=0.1.1   # číslo nové verze bez „v“, viz https://github.com/petrsovadina/petr-workflow/releases
+gh release download "v$V" -R petrsovadina/petr-workflow
+unzip -o "petr-workflow-$V.zip" -d ~
 ~/petr-workflow/install.sh
 ```
 
